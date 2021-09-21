@@ -25,7 +25,7 @@ require_relative "postgres/pool"
 require 'pg'
 
 module PG
-	def self.connect(connection_string)
+	def self.async_connect(connection_string)
 		Async::Postgres::Proxy.new(connection_string)
 	end
 end
